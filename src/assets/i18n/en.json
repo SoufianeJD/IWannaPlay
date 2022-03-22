@@ -1,0 +1,45 @@
+{
+  "general": {
+      "title1": "Can you be addicted",
+      "title2": "to playing a sport ?",
+      "button":"Game-on !",
+      "announcements":"announcements",
+      "or":"OR",
+      "add":"Add"
+  },
+  "navbar":{
+"stillindev":"In development...",
+"register":"Register",
+"login":"Login",
+"home":"Home"
+  },
+
+  "sports": {
+    "football": "Football",
+    "hockey": "Hockey",
+    "basketball":"Basketball"
+},
+
+"login": {
+  "username": "Username",
+  "password": "Password",
+  "alert":"Username is required !",
+  "alert2":"Password is required",
+  "alert3":"Password must be at least 6 characters"
+},
+"register": {
+  "fullname": "Fullname",
+  "password": "Password",
+  "email":"Email",
+  "phone":"Phone",
+  "alert":"Username must be at least 6 characters",
+  "alert2":"Username must be at most 20 characters",
+  "alert3":"Email is required",
+  "alert4":"Email must be a valid email address",
+  "alert5":"Password is required",
+  "alert6":"Password must be at least 6 characters",
+  "alert7":"Signup failed",
+  "alert8":"Your registration is successful !"
+}
+
+}

@@ -1,0 +1,76 @@
+<div class="example-container">
+  <div class="form-container">
+    <div class="row">
+      <div class="col-6">
+        <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+      <h2 style="margin-left:75px">{{ 'navbar.register' | translate }}</h2>
+
+      <mat-form-field style="width: 220px;" class="form-field" appearance="outline">
+        <mat-label> {{ 'register.fullname' | translate }} </mat-label>
+        <input matInput    type="text" name="username" [(ngModel)]="form.username" required minlength="3"  maxlength="20" #username="ngModel">
+      </mat-form-field>
+
+      <div class="alert-danger" *ngIf="username.errors && f.submitted">
+        <div *ngIf="username.errors.required"> {{ 'register.alert' | translate }}</div>
+        <div *ngIf="username.errors.minlength">
+          {{ 'register.alert' | translate }}
+        </div>
+        <div *ngIf="username.errors.maxlength">
+          {{ 'register.alert2' | translate }}
+        </div>
+      </div>
+
+      <mat-form-field style="width: 220px;" class="form-field" appearance="outline">
+        <mat-label> {{ 'register.email' | translate }} </mat-label>
+        <input matInput   type="email" name="email" [(ngModel)]="form.email" required email #email="ngModel">
+      </mat-form-field>
+
+      <div class="alert-danger" *ngIf="email.errors && f.submitted">
+        <div *ngIf="email.errors.required">{{ 'register.alert3' | translate }}</div>
+        <div *ngIf="email.errors.email">
+          {{ 'register.alert4' | translate }}
+        </div>
+      </div>
+
+
+
+      <mat-form-field style="width: 220px;" class="form-field" appearance="outline">
+        <mat-label>  {{ 'register.phone' | translate }}
+        </mat-label>
+        <input matInput  type="number" name="phone" [(ngModel)]="form.phone" required phone #phone="ngModel">
+      </mat-form-field>
+
+      <!-- <div class="alert-danger" *ngIf="phone.errors && f.submitted">
+        <div *ngIf="phone.errors.required">Email is required</div>
+        <div *ngIf="phone.errors.phone">
+          Email must be a valid email address
+        </div>
+      </div> -->
+
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>  {{ 'register.password' | translate }} </mat-label>
+        <input matInput  type="password" name="password" [(ngModel)]="form.password"  required minlength="6" #password="ngModel">
+      </mat-form-field>
+
+      <div class="alert-danger" *ngIf="password.errors && f.submitted">
+        <div *ngIf="password.errors.required">{{ 'register.alert5' | translate }}</div>
+        <div *ngIf="password.errors.minlength">
+          {{ 'register.alert6' | translate }}
+        </div>
+      </div>
+<br>
+
+      <button  style="margin-left:65px" mat-raised-button color="primary" type="submit">{{ 'navbar.register' | translate }}</button>
+      <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+        {{ 'register.alert7' | translate }}<br />{{ errorMessage }}
+      </div>
+    </form>
+    <div class="alert alert-success" *ngIf="isSuccessful">
+      {{ 'register.alert8' | translate }}
+    </div>
+  </div>
+  <div class="col-6"><img width="304" height="500" src="https://medias.lequipe.fr/img-photo-jpg/neymar-au-duel-avec-le-defenseur-capverdien-carlos-ponck-lors-de-psg-istanbul-basaksehir-5-1-le-9/1500000001483973/543:28,1836:1322-1200-1200-75/bf04f.jpg" alt="Logo" /></div>
+</div>
+</div>
+</div>
+

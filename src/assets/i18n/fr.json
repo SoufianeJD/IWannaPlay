@@ -1,0 +1,42 @@
+{
+  "general": {
+      "title1": "Comment on devient",
+      "title2": "accro au sport ?",
+      "button":"Allons-y !",
+      "announcements":"annonces",
+      "or":"OU",
+      "add":"Ajouter"
+  },
+  "navbar":{
+    "stillindev":"En cours de développement...",
+    "register":"S'inscrire",
+"login":"Connexion",
+"home":"Accueil"
+      },
+    "sports": {
+      "football": "Football",
+      "hockey": "Hockey",
+      "basketball":"Basketball"
+  },
+  "login": {
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "alert":"Nom d'utilisateur est nécessaire !",
+    "alert2":"Mot de passe requis",
+    "alert3":"Le mot de passe doit être au moins de 6 caractères"
+  },
+  "register": {
+    "fullname": "Nom et prénom",
+    "password": "Mot de passe",
+    "email":"Email",
+    "phone":"Cellulaire",
+    "alert":"Le nom d'utilisateur doit comporter au moins 6 caractères",
+    "alert2":"Le nom d'utilisateur doit comporter au maximum 20 caractères",
+    "alert3":"Email est requis",
+    "alert4":"Email doit être une adresse e-mail valide",
+    "alert5":"Mot de passe requis",
+    "alert6":"Le mot de passe doit être au moins de 6 caractères",
+    "alert7":"Échec de l'inscription",
+    "alert8":"Votre inscription est réussie !"
+  }
+}

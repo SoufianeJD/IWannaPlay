@@ -1,0 +1,48 @@
+<div class="example-container">
+  <div class="form-container">
+    <div class="row">
+      <div class="col-6">
+    <form>
+      <h2>Title</h2>
+
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> Full address
+        </mat-label>
+        <textarea matInput formControlName="address" required> </textarea>
+      </mat-form-field>
+
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> General notes
+        </mat-label>
+        <textarea matInput formControlName="notes" required> </textarea>
+      </mat-form-field>
+
+      <mat-form-field style="width: 220px;" class="form-field" appearance="outline">
+        <mat-label> Number of participants
+        </mat-label>
+        <input max="22" min="4" matInput formControlName="maxParticipants" type="number">
+
+      </mat-form-field>
+
+
+
+      <mat-form-field style="width: 220px;" class="form-field" appearance="outline">
+        <input formControlName="datetime" matInput type="datetime-local" placeholder="start date">
+      </mat-form-field>
+
+      <mat-form-field style="width: 90px;" class="form-field" appearance="outline">
+        <mat-label>Sports</mat-label>
+        <select formControlName="sport" matNativeControl required>
+          <option value="football">Football</option>
+          <option value="hockey">Hockey</option>
+          <option value="basketball">Basketball</option>
+        </select>
+      </mat-form-field>
+
+      <button   mat-raised-button color="primary" type="submit">Login</button>
+    </form>
+  </div>
+  <div class="col-6"><img width="304" height="500" src="https://medias.lequipe.fr/img-photo-jpg/neymar-au-duel-avec-le-defenseur-capverdien-carlos-ponck-lors-de-psg-istanbul-basaksehir-5-1-le-9/1500000001483973/543:28,1836:1322-1200-1200-75/bf04f.jpg" alt="Logo" /></div>
+</div>
+</div>
+</div>

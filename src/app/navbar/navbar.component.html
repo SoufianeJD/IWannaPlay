@@ -1,0 +1,37 @@
+
+
+  <nav *ngIf="!Auth" aria-label="" class="navbar navbar-expand-lg navbar-light bg-light">
+    <p style="padding-top: 13px;" (click)="home()" class="navbar-brand">{{ 'navbar.home' | translate }}</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <p style="text-align: center;padding-top: 13px; color: red;" class="navbar-brand">{{ 'navbar.stillindev' | translate }}</p>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+
+      </ul>
+      <ul  *ngIf="isLoggedIn" class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" (click)="profile()">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()">LOGOUT</a>
+        </li>
+
+    </ul>
+      <ul  *ngIf="!isLoggedIn" class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" (click)="openSignUp()">{{ 'navbar.register' | translate }}</a>
+        </li>
+        <li class="nav-item">
+      <a class="nav-link" (click)="openSignIn()">{{ 'navbar.login' | translate }}</a>
+    </li>
+
+    </ul>
+      <mat-button-toggle-group class="language" name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle (click)="useLanguage('en')">🇬🇧</mat-button-toggle>
+        <mat-button-toggle (click)="useLanguage('fr')">🇫🇷 </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+  </nav>

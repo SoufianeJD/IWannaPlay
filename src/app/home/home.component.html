@@ -1,0 +1,92 @@
+<div class="banner">
+  <div class="content">
+      <h1 class="mb-5">{{ 'general.title1' | translate }} <br/> {{ 'general.title2' | translate }}</h1>
+      <button (click)="goToBottom()" type="button" class="btn btn-light">{{ 'general.button' | translate }}<i class="bi bi-arrow-right"></i></button>
+  </div>
+</div>
+
+
+
+
+
+<div class="container mt-5 mb-5">
+
+  <div style ="padding-top: 25px;"  class="container">
+    <h1 style="padding-left: 42%;">{{ 'general.announcements' | translate }}</h1>
+    <div class="row">
+      <div class="col">
+  <div class="card">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+      <img alt=""
+      src="../../assets/img/hockey.jpg"
+        class="img-fluid"
+      />
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+      </a>
+    </div>
+    <div class="card-body">
+      <h2 style="padding-left: 38%;" class="card-title">Hockey</h2>
+
+      <button (click)="view()" style="margin-left:41%;" class="btn btn-light">🏒</button>
+    </div>
+  </div>
+  </div>
+
+  <div class="col">
+    <div class="card">
+      <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+        <img alt=""
+        src="../../assets/img/foot.jpg"
+          class="img-fluid"
+        />
+        <a href="#!">
+          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </a>
+      </div>
+      <div class="card-body">
+        <h2 style="padding-left: 38%;" class="card-title">Football</h2>
+
+        <button (click)="view()" style="margin-left:41%;" class="btn btn-light">⚽️</button>
+      </div>
+    </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+          <img alt=""
+            src="../../assets/img/baskett.jpg"
+            class="img-fluid"
+          />
+          <a href="#!">
+            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h2 style="padding-left: 35%;" class="card-title">Basketball</h2>
+          <button (click)="view()" style="margin-left:41%;" class="btn btn-light">🏀</button>
+        </div>
+      </div>
+      </div>
+
+
+  </div>
+
+  <div class="row">
+
+  <h1 *ngIf="!currentUser.isadmin" style="margin-left:48%;padding-top: 3%;">{{ 'general.or' | translate }}</h1>
+
+  </div>
+
+  <div class="row">
+
+    <button *ngIf="!currentUser.isadmin" id="bottom" (click)="add()" style="margin-left:47%"  class="btn btn-light">{{ 'general.add' | translate }}</button>
+
+    </div>
+
+
+  </div>
+
+
+</div>

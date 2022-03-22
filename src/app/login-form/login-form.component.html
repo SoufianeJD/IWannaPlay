@@ -1,0 +1,63 @@
+ <div class="example-container">
+  <div class="form-container">
+    <div class="row">
+      <div class="col-6">
+        <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()"  #f="ngForm" novalidate>
+      <h2  style="margin-left:75px">{{ 'navbar.login' | translate }}</h2>
+
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> {{ 'login.username' | translate }}
+        </mat-label>
+        <input matInput    type="text"
+        name="username"
+        [(ngModel)]="form.username"
+        required
+        #username="ngModel">
+        <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="username.errors && f.submitted"
+      >
+      {{ 'login.alert' | translate }}
+      </div>
+      </mat-form-field>
+
+
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> {{ 'login.password' | translate }}
+        </mat-label>
+        <input matInput  type="password"
+        name="password"
+        [(ngModel)]="form.password"
+        required
+        #password="ngModel">
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="password.errors && f.submitted"
+        >
+          <div *ngIf="password.errors.required">{{ 'login.alert2' | translate }}</div>
+          <div *ngIf="password.errors.minlength">
+            {{ 'login.alert3' | translate }}
+          </div>
+        </div>
+
+      </mat-form-field>
+
+
+      <br>
+
+      <button  style="margin-left:65px"   mat-raised-button color="primary" type="submit">{{ 'navbar.login' | translate }}</button>
+      <div class="alert alert-warning" *ngIf="f.submitted && isLoginFailed">
+        Signup failed!<br />{{ errorMessage }}
+      </div>
+    </form>
+    <div class="alert alert-success" *ngIf="isLoggedIn">
+      Your registration is successful!
+    </div>
+  </div>
+  <div class="col-6"><img width="324" height="500" src="../../assets/img/loginImg.png" alt="Logo" /></div>
+</div>
+</div>
+</div>
+
